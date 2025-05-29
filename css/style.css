@@ -1,0 +1,343 @@
+/*# sourceMappingURL=style.css.map */
+/* CSS RESET */
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+/* MENU PRINCIPAL*/
+.primary-nav {
+    background-color: #0b2e13;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+  }
+  
+  .main-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-item a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .search input {
+    width: 300px;
+    height: 40px;
+    border-radius: 2px;
+    border: none;
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .icons img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1); /* blanco sobre fondo oscuro */
+  }
+  
+  /* ======== NAV SECUNDARIO ======== */
+  .secondary-nav {
+    background-color: #0b2e13;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .sub-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+   
+  }
+  
+  .url {
+    color:white;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+
+  .dropdown-menu {
+    background-color: #0b2e13;
+    border: none;
+  }
+  
+  .dropdown-item {
+    color: white;
+    font-weight: 400;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #14532d;
+  }
+
+
+
+
+/* MAIN- IMAGEN PRINCIPAL */
+
+.hero{
+    background-image:url(../Imagenes/portada\ home.jpeg);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 2rem;
+    position: relative;
+    background-size: cover;
+background-position: center;
+height: 700px
+
+}
+.hero-content{
+color: white;
+padding: 1rem;
+}
+
+.button{
+background-color: aqua;
+}
+.p{
+background-color: aliceblue;
+}
+.footer{
+  background-color: #0b2e13;
+}
+
+/* SECTION WHOMEN*/
+
+/* MENU PRINCIPAL*/
+.primary-nav-disvover {
+  background-color: #0b2e13;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+}
+
+.main-discover-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item-discover a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.search-discover input {
+  width: 300px;
+  height: 40px;
+  border-radius: 2px;
+  border: none;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.icons img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1); /* blanco sobre fondo oscuro */
+}
+
+/* ======== NAV SECUNDARIO ======== */
+.secondary-nav-discover {
+  background-color: #0b2e13;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.sub-menu-discover {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+ 
+}
+
+.url {
+  color:white;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* MAIN- IMAGEN PRINCIPAL */
+
+.hero-whomen{
+  background-image:url(../Imagenes/Portadasection\ mujer.jpeg);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 2rem;
+  position: relative;
+  background-size: cover;
+background-position: center;
+height: 700px
+
+}
+.hero-content{
+color: white;
+padding: 1rem;
+}
+
+.button{
+background-color: aqua;
+}
+.p{
+background-color: aliceblue;
+}
+.footer{
+background-color: #0b2e13;
+}
+
+/* SECTION MEN*/
+
+/* MENU PRINCIPAL*/
+.primary-nav-disvover {
+  background-color: #0b2e13;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+}
+
+.main-discover-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item-discover a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.search-discover input {
+  width: 300px;
+  height: 40px;
+  border-radius: 2px;
+  border: none;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.icons img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1); /* blanco sobre fondo oscuro */
+}
+
+/* ======== NAV SECUNDARIO ======== */
+.secondary-nav-discover {
+  background-color: #0b2e13;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.sub-menu-discover {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+ 
+}
+
+.url {
+  color:white;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* MAIN- IMAGEN PRINCIPAL */
+
+.hero-men{
+  background-image:url(../Imagenes/portada.jpeg);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 2rem;
+  position: relative;
+  background-size: cover;
+background-position: center;
+height: 700px
+
+}
+.hero-content{
+color: white;
+padding: 1rem;
+}
+
+.button{
+background-color: aqua;
+}
+.p{
+background-color: aliceblue;
+}
+.footer{
+background-color: #0b2e13;
+}
+
