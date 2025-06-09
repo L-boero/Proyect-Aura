@@ -1,6 +1,8 @@
 
+@use 'mixins' as m; 
+
 .primary-nav {
-  @include mixins.flex-center;
+  @include m.flex-center; // <-- Aquí se usa 'm.'
   justify-content: space-between;
   padding: 1rem 2rem;
   background-color: white;
@@ -8,7 +10,7 @@
 }
 
 .secondary-nav {
-  @include mixins.flex-center;
+  @include m.flex-center; // <-- Aquí se usa 'm.'
   gap: 1rem;
   padding: 0.5rem 2rem;
   background-color: #fafafa;

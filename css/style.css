@@ -1,36 +1,235 @@
-/* Error: Undefined mixin.
- *    ,
- * 13 | / @include responsive(mobile) {
- * 14 | |   .navbar {
- * 15 | |     flex-direction: column;
- * 16 | |     align-items: flex-start;
- * 17 | | 
- * 18 | |     .nav-links {
- * 19 | |       flex-direction: column;
- * 20 | |       width: 100%;
- * 21 | |     }
- * 22 | |   }
- * 23 | | 
- * 24 | |   .button-primary {
- * 25 | |     width: 100%;
- * 26 | |   }
- * 27 | | 
- * 28 | |   .hero {
- * 29 | |     text-align: center;
- * 30 | |     padding: 2rem 1rem;
- * 31 | |   }
- * 32 | \ }
- *    '
- *   scss/_responsive.scss 13:1  @use
- *   scss/style.scss 4:1         root stylesheet */
+/*# sourceMappingURL=style.css.map */
+/* CSS RESET */
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+.primary-nav {
+  background-color: #0b2e13;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+.main-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.search input {
+  width: 300px;
+  height: 40px;
+  border-radius: 2px;
+  border: none;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: white;
+  font-size: 1.3rem;
+}
+  
+  /* ======== NAV SECUNDARIO ======== */
+  .secondary-nav {
+    background-color: #0b2e13;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .sub-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+   
+  }
+  
+  .url {
+    color:white;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+
+  .dropdown-menu {
+    background-color: #0b2e13;
+    border: none;
+  }
+  
+  .dropdown-item {
+    color: white;
+    font-weight: 400;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #14532d;
+  }
+ 
+
+/* MAIN- IMAGEN PRINCIPAL */
+
+.hero {
+  background-image: url(../assets/Imagenes/portada\ home.jpeg);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 2rem;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+}
+
+.hero-link {
+  text-decoration: none;
+  color: inherit;
   display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 13 \2502  \250c  @include responsive(mobile) {\a 14 \2502  \2502    .navbar {\a 15 \2502  \2502      flex-direction: column;\a 16 \2502  \2502      align-items: flex-start;\a 17 \2502  \2502  \a 18 \2502  \2502      .nav-links {\a 19 \2502  \2502        flex-direction: column;\a 20 \2502  \2502        width: 100%;\a 21 \2502  \2502      }\a 22 \2502  \2502    }\a 23 \2502  \2502  \a 24 \2502  \2502    .button-primary {\a 25 \2502  \2502      width: 100%;\a 26 \2502  \2502    }\a 27 \2502  \2502  \a 28 \2502  \2502    .hero {\a 29 \2502  \2502      text-align: center;\a 30 \2502  \2502      padding: 2rem 1rem;\a 31 \2502  \2502    }\a 32 \2502  \2514  }\a    \2575 \a   scss/_responsive.scss 13:1  @use\a   scss/style.scss 4:1         root stylesheet";
+}
+
+.hero-content {
+  color: white;
+  padding: 1rem;
+}
+
+.boton-enlace {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2b7de9;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.boton-enlace:hover {
+  background-color: #1a5edc;
+  transform: scale(1.05);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.hero-link:hover .hero {
+  filter: brightness(1.1);
+  transition: filter 0.3s ease;
+}
+/* TARJETAS CON CATEGORIAS*/
+.hover-zoom {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.categoria-link:hover .hover-zoom {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+
+
+  .p{
+background-color: aliceblue;
+}
+.footer{
+  background-color: #0b2e13;
+}
+
+/* SECTION WHOMEN*/
+
+/* WHOMEN- IMAGEN PRINCIPAL */
+
+.hero-whomen{
+  background-image:url(../assets/Imagenes/Portadasection\ mujer.jpeg);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 2rem;
+  position: relative;
+  background-size: cover;
+background-position: center;
+height: 700px
+
+}
+
+
+
+
+/* SECTION MEN*/
+
+/* MAIN- IMAGEN PRINCIPAL */
+
+.hero-men{
+  background-image:url(../assets/Imagenes/portada.jpeg);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 2rem;
+  position: relative;
+  background-size: cover;
+background-position: center;
+height: 700px
+
+}
+.hero-content{
+color: white;
+padding: 1rem;
+}
+
+/* SECTION CHILD*/
+
+/* CHILD- IMAGEN PRINCIPAL */
+
+.hero-child{
+  background-image:url(../assets/Imagenes/MY\ THERESA_\ MONCLER\ Kids’\ Outerwear….jpeg);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 2rem;
+  position: relative;
+  background-size: cover;
+background-position: center;
+height: 700px
+}
+  
+.hero-content{
+color: white;
+padding: 1rem;
+}
+/* SECTION DISCOVER*/
+
+/* DISCOVER- IMAGEN PRINCIPAL */
+.hero-discover{
+  background-image:url(../assets/Imagenes/portada\ home.jpeg);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 2rem;
+  position: relative;
+  background-size: cover;
+background-position: center;
+height: 700px
 }
