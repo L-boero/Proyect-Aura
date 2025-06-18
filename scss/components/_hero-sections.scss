@@ -1,0 +1,149 @@
+
+@use '../mixins/mixins' as m;
+
+.hero {
+  @include m.hero-section('../../assets/Imagenes/portada home.jpeg');
+  text-align: center;
+  padding: 2rem 1rem;
+  min-height: 500px;
+
+  .hero-content {
+    max-width: 500px;
+    text-align: left;
+
+    @include m.responsive(mobile) {
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.hero-whomen {
+  @include m.hero-section(
+    '../assets/Imagenes/Portadasection mujer.jpeg',
+    $min-height: 700px,            
+    $text-color: white,
+    $content-justify: flex-start,   
+    $content-align: flex-end        
+  );
+  margin-bottom: 20px; 
+  .hero-content { 
+    padding-left: 5%;
+    padding-bottom: 5%;
+    text-align: left;
+    h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+  
+  
+
+
+.hero-men {
+    @include m.hero-section(
+     '../assets/imagenes/men33.jpeg', 
+    $min-height: 500px,                   
+    $text-color: white,       
+    $content-justify: flex-start,    
+    $content-align: flex-end,  
+  );
+  
+  margin-bottom: 20px; 
+
+  .hero-men-content { 
+    h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+  
+  
+
+    
+.hero-child {
+  @include m.hero-section(
+    '../assets/Imagenes/camisas kids.jpeg',
+    $min-height: 700px,           
+    $text-color: white,
+    $content-justify: flex-start,   
+    $content-align: flex-end,       
+  );
+  margin-bottom: 20px; 
+  .hero-content { 
+    padding-left: 5%;
+    padding-bottom: 5%;
+    text-align: left;
+    h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+.hero-discover {
+  position: relative; 
+  min-height: 700px;  
+  color: white;       
+  margin-bottom: 20px; 
+
+  display: flex;             
+  justify-content: flex-start; 
+  align-items: flex-end;     
+  padding: 2rem;            
+  overflow: hidden;          
+
+  .video-background {
+    position: absolute; 
+    top: 0;             
+    left: 0;           
+    width: 100%;        
+    height: 100%;       
+    z-index: -1;        
+  }
+
+  .video-background iframe { 
+    position: absolute;  
+    top: 50%;           
+    left: 50%;         
+    transform: translate(-50%, -50%); 
+
+    min-width: 100%;     
+    min-height: 100%;    
+
+    width: auto;         
+    height: auto;        
+    object-fit: cover;   
+
+    filter: brightness(0.7); 
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;         
+   
+    padding-left: 5%;
+    padding-bottom: 5%;
+    text-align: left;
+    h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+  }
+}

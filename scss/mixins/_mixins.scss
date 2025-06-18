@@ -1,0 +1,69 @@
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+// MIXIN PARA BOTONES
+@mixin button-style($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin hero-section(
+  $image-url,
+  $min-height: 500px,
+  $text-color: white,
+  $content-justify: center,      
+  $content-align: center,  
+  $padding: 2rem
+) {
+  background-image: url($image-url);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: $min-height;
+  color: $text-color;
+
+  display: flex;
+  position: relative;
+  padding: $padding;
+
+   @if $content-justify == center { // Usa $content-justify
+    justify-content: center;
+  } @else if $content-justify == flex-start {
+    justify-content: flex-start;
+  } @else if $content-justify == flex-end {
+    justify-content: flex-end;
+  } @else {
+    justify-content: center; // Default
+  }
+
+  @if $content-align == center { // Usa $content-align
+    align-items: center;
+  } @else if $content-align == flex-start {
+    align-items: flex-start;
+  } @else if $content-align == flex-end {
+    align-items: flex-end;
+  } @else {
+    align-items: center; // Default
+  }
+}

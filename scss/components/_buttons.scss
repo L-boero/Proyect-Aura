@@ -1,0 +1,25 @@
+
+@use '../mixins/mixins' as m; // Asegúrate de que esta ruta sea correcta para tu archivo de mixins.
+
+// Clase para el botón de enlace general (si lo usas para otros enlaces/botones)
+.boton-enlace {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+
+  @include m.responsive(mobile) {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+

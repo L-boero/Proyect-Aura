@@ -1,235 +1,337 @@
-/*# sourceMappingURL=style.css.map */
-/* CSS RESET */
-
-*{
-padding: 0;
-margin: 0;
-box-sizing: border-box;
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.primary-nav {
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/*Utilities */
+/*Utilities */
+.bg-primary {
   background-color: #0b2e13;
+}
+
+.bg-secondary {
+  background-color: #2b7de9;
+}
+
+.bg-accent {
+  background-color: #14532d;
+}
+
+.bg-neutral {
+  background-color: #f5f5f5;
+}
+
+/* Mixins */
+/* Layout */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+}
+.footer p {
+  font-size: 0.9rem;
+}
+
+/* Components */
+/* Mixins */
+.boton-enlace {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.boton-enlace:hover {
+  background-color: #0056b3;
+}
+@media (max-width: 768px) {
+  .boton-enlace {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mixins */
+.hero {
+  background-image: url("../../assets/Imagenes/portada home.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 500px;
+  color: white;
   display: flex;
+  position: relative;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  min-height: 500px;
+}
+.hero .hero-content {
+  max-width: 500px;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .hero .hero-content {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+.hero .hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+.hero .hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-whomen {
+  background-image: url("../assets/Imagenes/Portadasection mujer.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 700px;
+  color: white;
+  display: flex;
+  position: relative;
+  padding: 2rem;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+.hero-whomen .hero-content {
+  padding-left: 5%;
+  padding-bottom: 5%;
+  text-align: left;
+}
+.hero-whomen .hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-men {
+  background-image: url("../assets/imagenes/men3.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 500px;
+  color: white;
+  display: flex;
+  position: relative;
+  padding: 2rem;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+.hero-men .hero-men-content h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.hero-child {
+  background-image: url("../assets/Imagenes/camisas kids.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 700px;
+  color: white;
+  display: flex;
+  position: relative;
+  padding: 2rem;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+.hero-child .hero-content {
+  padding-left: 5%;
+  padding-bottom: 5%;
+  text-align: left;
+}
+.hero-child .hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-discover {
+  position: relative;
+  min-height: 700px;
+  color: white;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 2rem;
+  overflow: hidden;
+}
+.hero-discover .video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.hero-discover .video-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+.hero-discover .hero-content {
+  position: relative;
+  z-index: 1;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  text-align: left;
+}
+.hero-discover .hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Mixins */
+.hover-zoom {
+  transition: transform 0.3s;
+}
+.hover-zoom:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .hover-zoom {
+    transform: scale(1);
+    filter: none;
+  }
+}
+
+/* Mixins */
+.primary-nav {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  margin-top: 1rem;
-  gap: 2rem;
-}
-
-.main-menu {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu-item a {
+  background-color: #072e19;
   color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  text-transform: uppercase;
 }
-
-.search input {
-  width: 300px;
-  height: 40px;
-  border-radius: 2px;
-  border: none;
-  padding-left: 1rem;
-  font-size: 1rem;
-}
-
-.icons {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  color: white;
-  font-size: 1.3rem;
-}
-  
-  /* ======== NAV SECUNDARIO ======== */
-  .secondary-nav {
-    background-color: #0b2e13;
+@media (max-width: 768px) {
+  .primary-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .primary-nav .main-menu {
+    flex-direction: column;
+    gap: 1rem;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 0.8rem 0;
-    border-bottom: 1px solid #ddd;
   }
-  
-  .sub-menu {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    
-   
+  .primary-nav .search input {
+    width: 100%;
   }
-  
-  .url {
-    color:white;
-    text-decoration: none;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-  }
-
-  .dropdown-menu {
-    background-color: #0b2e13;
-    border: none;
-  }
-  
-  .dropdown-item {
-    color: white;
-    font-weight: 400;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-  }
-  
-  .dropdown-item:hover {
-    background-color: #14532d;
-  }
- 
-
-/* MAIN- IMAGEN PRINCIPAL */
-
-.hero {
-  background-image: url(../assets/Imagenes/portada\ home.jpeg);
+}
+.primary-nav .main-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding: 2rem;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  height: 700px;
+  gap: 2rem;
 }
-
-.hero-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.hero-content {
+.primary-nav .main-menu .menu-item a {
   color: white;
-  padding: 1rem;
-}
-
-.boton-enlace {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #2b7de9;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
+  text-decoration: none !important;
   font-weight: bold;
-  margin-top: 10px;
 }
-.boton-enlace:hover {
-  background-color: #1a5edc;
-  transform: scale(1.05);
-  transition: background-color 0.3s ease, transform 0.3s ease;
+.primary-nav .main-menu .menu-item a:hover {
+  color: #a0a0a0;
 }
-.hero-link:hover .hero {
-  filter: brightness(1.1);
-  transition: filter 0.3s ease;
+.primary-nav .main-menu .menu-item.active a {
+  text-decoration: underline !important;
+  color: #007bff !important;
 }
-/* TARJETAS CON CATEGORIAS*/
-.hover-zoom {
-  transition: transform 0.3s ease, filter 0.3s ease;
+.primary-nav .search input {
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background-color: #444;
+  color: white;
 }
-
-.categoria-link:hover .hover-zoom {
-  transform: scale(1.05);
-  filter: brightness(1.1);
+.primary-nav .search input::placeholder {
+  color: #bbb;
 }
-
-
-
-  .p{
-background-color: aliceblue;
-}
-.footer{
-  background-color: #0b2e13;
-}
-
-/* SECTION WHOMEN*/
-
-/* WHOMEN- IMAGEN PRINCIPAL */
-
-.hero-whomen{
-  background-image:url(../assets/Imagenes/Portadasection\ mujer.jpeg);
+.primary-nav .icons {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding: 2rem;
-  position: relative;
-  background-size: cover;
-background-position: center;
-height: 700px
-
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+.primary-nav .icons i {
+  cursor: pointer;
+}
+.primary-nav .icons i:hover {
+  color: #a0a0a0;
 }
 
-
-
-
-/* SECTION MEN*/
-
-/* MAIN- IMAGEN PRINCIPAL */
-
-.hero-men{
-  background-image:url(../assets/Imagenes/portada.jpeg);
+.secondary-nav {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding: 2rem;
-  position: relative;
-  background-size: cover;
-background-position: center;
-height: 700px
-
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background-color: #072e19;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #eee;
 }
-.hero-content{
-color: white;
-padding: 1rem;
-}
-
-/* SECTION CHILD*/
-
-/* CHILD- IMAGEN PRINCIPAL */
-
-.hero-child{
-  background-image:url(../assets/Imagenes/MY\ THERESA_\ MONCLER\ Kids’\ Outerwear….jpeg);
+.secondary-nav .sub-menu {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding: 2rem;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .secondary-nav .sub-menu {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+}
+.secondary-nav .sub-menu .sub-menu-item {
   position: relative;
-  background-size: cover;
-background-position: center;
-height: 700px
 }
-  
-.hero-content{
-color: white;
-padding: 1rem;
+.secondary-nav .sub-menu .sub-menu-item a.url {
+  color: white;
+  text-decoration: none !important;
+  font-weight: bold;
 }
-/* SECTION DISCOVER*/
+.secondary-nav .sub-menu .sub-menu-item a.url:hover {
+  color: #a0a0a0;
+}
+.secondary-nav .sub-menu .sub-menu-item.active a.url {
+  text-decoration: underline !important;
+  color: #007bff !important;
+}
 
-/* DISCOVER- IMAGEN PRINCIPAL */
-.hero-discover{
-  background-image:url(../assets/Imagenes/portada\ home.jpeg);
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding: 2rem;
-  position: relative;
-  background-size: cover;
-background-position: center;
-height: 700px
-}
+/*# sourceMappingURL=style.css.map */

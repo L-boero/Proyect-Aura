@@ -1,6 +1,22 @@
 
-@use 'variables';
-@use 'mixins';
-@use 'components';
-@use 'responsive';
+/* Base */
+@use 'base/reset';
 
+/*Utilities */
+
+@use 'utilities/variables';
+@use 'utilities/helpers';
+
+/* Mixins */
+@use 'mixins/mixins';
+
+
+ /* Layout */
+@use 'layout/footer';
+
+ /* Components */
+@use 'components/buttons';
+@use 'components/hero-sections';
+@use 'components/hover-effects';
+@use 'components/cards';
+@use 'components/navs';

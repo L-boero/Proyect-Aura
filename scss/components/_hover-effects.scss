@@ -1,0 +1,14 @@
+
+@use '../mixins/mixins' as m; 
+.hover-zoom {
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @include m.responsive(mobile) {
+    transform: scale(1);
+    filter: none;
+  }
+}
