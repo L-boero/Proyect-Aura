@@ -1,15 +1,21 @@
 
 @use '../mixins/mixins' as m;
 
+
 .hero {
-  @include m.hero-section('../../assets/Imagenes/portada home.jpeg');
-  text-align: center;
-  padding: 2rem 1rem;
-  min-height: 500px;
+  
+  @include m.hero-section(
+    '../../assets/Imagenes/portada home.jpeg',
+    $min-height: 500px,
+    $text-color: white,
+    $content-justify: flex-start, 
+    $content-align: flex-end,   
+  );
 
   .hero-content {
     max-width: 500px;
     text-align: left;
+    text-decoration: none;
 
     @include m.responsive(mobile) {
       padding: 0.5rem;
@@ -20,11 +26,13 @@
       font-size: 3rem;
       margin-bottom: 1rem;
       line-height: 1.1;
+      text-decoration: none;
     }
 
     p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
+      text-decoration: none;
     }
   }
 }
@@ -32,7 +40,7 @@
 .hero-whomen {
   @include m.hero-section(
     '../assets/Imagenes/Portadasection mujer.jpeg',
-    $min-height: 700px,            
+    $min-height: 500px,            
     $text-color: white,
     $content-justify: flex-start,   
     $content-align: flex-end        
@@ -55,7 +63,7 @@
 
 .hero-men {
     @include m.hero-section(
-     '../assets/imagenes/men33.jpeg', 
+     '../assets/imagenes/men3.jpeg', 
     $min-height: 500px,                   
     $text-color: white,       
     $content-justify: flex-start,    
@@ -79,7 +87,7 @@
 .hero-child {
   @include m.hero-section(
     '../assets/Imagenes/camisas kids.jpeg',
-    $min-height: 700px,           
+    $min-height: 500px,           
     $text-color: white,
     $content-justify: flex-start,   
     $content-align: flex-end,       
@@ -98,7 +106,7 @@
 }
 .hero-discover {
   position: relative; 
-  min-height: 700px;  
+  min-height: 500px;  
   color: white;       
   margin-bottom: 20px; 
 
